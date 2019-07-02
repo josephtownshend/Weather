@@ -1,0 +1,18 @@
+body {
+  background-color: #000;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Rubik Mono One', monospace;
+  font-size: 50px;
+}
+
+.container {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
