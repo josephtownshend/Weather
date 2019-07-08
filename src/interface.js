@@ -5,9 +5,18 @@ $(document).ready(function() {
     $( "#londonWeatherDescription" ).text(londonWeather.weather[0].description)
   })
 
-  $.get("https://api.noopschallenge.com/hexbot", function(hexBot) {
-    $( "#hexBot" ).text(hexBot.colors[0].value)
-  })
+  // $.get("https://api.noopschallenge.com/hexbot", function(hexBot) {
+  //   $( "#hexBot" ).text(hexBot.colors[0].value)
+  // })
 
+    $.get( "https://api.noopschallenge.com/hexbot", function( resp ) {
+       api_colour = resp.colors[0].value;
+       $("h1").css("color", api_colour);
+     });
+
+    $.get( "https://api.noopschallenge.com/hexbot", function( resp ) {
+      api_colour = resp.colors[0].value;
+      $("body").css("background-color", api_colour);
+    });
 
 });
