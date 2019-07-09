@@ -19,4 +19,12 @@ $(document).ready(function() {
       $("body").css("background-color", api_colour);
     });
 
+    $.get("https://api.tfl.gov.uk/Line/jubilee", function(jubilee) {
+      $( "#jubilee" ).text(jubilee[0].id)
+    })
+    $.get("https://api.tfl.gov.uk/Line/bakerloo", function(jubileeDescription) {
+      $( "#jubileeDescription" ).text(jubileeDescription[0].disruptions)
+      console.log(jubileeDescription)
+    })
+
 });
